@@ -1,0 +1,2 @@
+adc_2ch_sequence.v,verilog,xil_defaultlib,../../../../basys_exam_2025.gen/sources_1/ip/adc_2ch_sequence/adc_2ch_sequence.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

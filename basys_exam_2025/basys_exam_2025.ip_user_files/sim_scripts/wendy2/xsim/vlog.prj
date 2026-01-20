@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../basys_exam_2025.gen/sources_1/ip/wendy2/sim/wendy2.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

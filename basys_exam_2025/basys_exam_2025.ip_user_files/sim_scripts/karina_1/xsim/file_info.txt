@@ -1,0 +1,2 @@
+karina_1.v,verilog,xil_defaultlib,../../../../basys_exam_2025.gen/sources_1/ip/karina_1/sim/karina_1.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
