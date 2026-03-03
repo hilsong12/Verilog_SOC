@@ -1,0 +1,27 @@
+axi_gpio_0:
+- axi_gpio
+- gpio
+axi_uartlite_0:
+- axi_uartlite
+- uartlite
+microblaze_riscv_0_axi_intc:
+- axi_intc
+- intc
+myip_cooktimer_0:
+- myip_cooktimer
+- None
+myip_fnd_cntr_0:
+- myip_fnd_cntr
+- None
+myip_iic_cntr_0:
+- myip_iic_cntr
+- None
+myip_iic_cntr_1:
+- myip_iic_cntr
+- None
+myip_stopwatch_0:
+- myip_stopwatch
+- None
+myip_watch_0:
+- myip_watch
+- None

@@ -38,7 +38,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
-EAStep vivado -log ili9341_karina_display.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ili9341_karina_display.tcl -notrace
+/bin/touch .init_design.begin.rst
+EAStep vivado -log tft_lcd_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source tft_lcd_top.tcl -notrace
 
 

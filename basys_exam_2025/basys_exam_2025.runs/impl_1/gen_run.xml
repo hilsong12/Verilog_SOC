@@ -1,85 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1768549025">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1772499187">
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="ili9341_karina_display_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS" Name="ili9341_karina_display_routed.rqs"/>
-  <File Type="RBD_FILE" Name="ili9341_karina_display.rbd"/>
-  <File Type="NPI_FILE" Name="ili9341_karina_display.npi"/>
-  <File Type="RNPI_FILE" Name="ili9341_karina_display.rnpi"/>
-  <File Type="CFI_FILE" Name="ili9341_karina_display.cfi"/>
-  <File Type="RCFI_FILE" Name="ili9341_karina_display.rcfi"/>
-  <File Type="PL-PDI-FILE" Name="ili9341_karina_display_pld.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="ili9341_karina_display_boot.pdi"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ili9341_karina_display_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ili9341_karina_display_postroute_physopt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="ili9341_karina_display_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="ili9341_karina_display_postplace_pwropt.dcp"/>
-  <File Type="PWROPT-DCP" Name="ili9341_karina_display_pwropt.dcp"/>
-  <File Type="PLACE-DCP" Name="ili9341_karina_display_placed.dcp"/>
-  <File Type="OPT-DCP" Name="ili9341_karina_display_opt.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="ili9341_karina_display_timing_summary_routed.pb"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="ili9341_karina_display_routed_bb.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="ili9341_karina_display_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="ili9341_karina_display_routed.dcp"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="ili9341_karina_display_incremental_reuse_pre_placed.rpt"/>
-  <File Type="OPT-HWDEF" Name="ili9341_karina_display.hwdef"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="tft_lcd_top_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="tft_lcd_top_routed.rqs"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-BGN" Name="tft_lcd_top.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="tft_lcd_top.sysdef"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="ili9341_karina_display.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="ili9341_karina_display.sysdef"/>
-  <File Type="BITSTR-MMI" Name="ili9341_karina_display.mmi"/>
-  <File Type="BITSTR-BMM" Name="ili9341_karina_display_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="ili9341_karina_display.nky"/>
-  <File Type="BITSTR-RBT" Name="ili9341_karina_display.rbt"/>
+  <File Type="BITSTR-LTX" Name="tft_lcd_top.ltx"/>
+  <File Type="RBD_FILE" Name="tft_lcd_top.rbd"/>
+  <File Type="NPI_FILE" Name="tft_lcd_top.npi"/>
+  <File Type="RNPI_FILE" Name="tft_lcd_top.rnpi"/>
+  <File Type="CFI_FILE" Name="tft_lcd_top.cfi"/>
+  <File Type="RCFI_FILE" Name="tft_lcd_top.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="tft_lcd_top_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="tft_lcd_top_boot.pdi"/>
+  <File Type="RDI-RDI" Name="tft_lcd_top.vdi"/>
+  <File Type="PDI-FILE" Name="tft_lcd_top.pdi"/>
+  <File Type="BITSTR-MMI" Name="tft_lcd_top.mmi"/>
+  <File Type="BITSTR-BMM" Name="tft_lcd_top_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="tft_lcd_top.nky"/>
+  <File Type="BITSTR-RBT" Name="tft_lcd_top.rbt"/>
+  <File Type="BITSTR-MSK" Name="tft_lcd_top.msk"/>
+  <File Type="BG-BIN" Name="tft_lcd_top.bin"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
-  <File Type="BG-BIT" Name="ili9341_karina_display.bit"/>
-  <File Type="PDI-FILE" Name="ili9341_karina_display.pdi"/>
-  <File Type="RDI-RDI" Name="ili9341_karina_display.vdi"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="ili9341_karina_display_timing_summary_routed.rpt"/>
-  <File Type="BG-BIN" Name="ili9341_karina_display.bin"/>
-  <File Type="PLACE-IO" Name="ili9341_karina_display_io_placed.rpt"/>
-  <File Type="OPT-DRC" Name="ili9341_karina_display_drc_opted.rpt"/>
-  <File Type="PLACE-CTRL" Name="ili9341_karina_display_control_sets_placed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="ili9341_karina_display_methodology_drc_routed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="ili9341_karina_display_utilization_placed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="ili9341_karina_display_timing_summary_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="ili9341_karina_display_reports.tcl"/>
-  <File Type="PA-TCL" Name="ili9341_karina_display.tcl"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ili9341_karina_display_methodology_drc_routed.pb"/>
-  <File Type="BG-BGN" Name="ili9341_karina_display.bgn"/>
-  <File Type="PLACE-UTIL" Name="ili9341_karina_display_utilization_placed.rpt"/>
-  <File Type="ROUTE-STATUS" Name="ili9341_karina_display_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="ili9341_karina_display_route_status.pb"/>
-  <File Type="BG-DRC" Name="ili9341_karina_display.drc"/>
-  <File Type="ROUTE-PWR" Name="ili9341_karina_display_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-RPX" Name="ili9341_karina_display_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="ili9341_karina_display_power_summary_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="ili9341_karina_display_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ili9341_karina_display_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-RPX" Name="ili9341_karina_display_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="ili9341_karina_display_drc_routed.pb"/>
-  <File Type="ROUTE-SIMILARITY" Name="ili9341_karina_display_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="ili9341_karina_display_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="ili9341_karina_display_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="ili9341_karina_display_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="ili9341_karina_display_bus_skew_routed.pb"/>
-  <File Type="BITSTR-MSK" Name="ili9341_karina_display.msk"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ili9341_karina_display_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ili9341_karina_display_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ili9341_karina_display_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ili9341_karina_display_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ili9341_karina_display_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ili9341_karina_display_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="tft_lcd_top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="tft_lcd_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="tft_lcd_top_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="tft_lcd_top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="tft_lcd_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="tft_lcd_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="tft_lcd_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="tft_lcd_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="tft_lcd_top_postroute_physopt.dcp"/>
+  <File Type="BG-DRC" Name="tft_lcd_top.drc"/>
+  <File Type="ROUTE-RQS-PB" Name="tft_lcd_top_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="tft_lcd_top_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="tft_lcd_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="tft_lcd_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="tft_lcd_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="tft_lcd_top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="tft_lcd_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="tft_lcd_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="tft_lcd_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="tft_lcd_top_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="tft_lcd_top_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="tft_lcd_top_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="tft_lcd_top_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="tft_lcd_top_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="tft_lcd_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="tft_lcd_top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="tft_lcd_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="tft_lcd_top_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="tft_lcd_top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="tft_lcd_top_drc_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="tft_lcd_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="tft_lcd_top_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="tft_lcd_top_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="tft_lcd_top_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="tft_lcd_top_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="tft_lcd_top_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="tft_lcd_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="tft_lcd_top_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="tft_lcd_top_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="tft_lcd_top_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="tft_lcd_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="tft_lcd_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="tft_lcd_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="tft_lcd_top_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="tft_lcd_top_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="tft_lcd_top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="tft_lcd_top_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="tft_lcd_top_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="tft_lcd_top_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="tft_lcd_top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="tft_lcd_top_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="tft_lcd_top_rqa_opted.pb"/>
+  <File Type="OPT-HWDEF" Name="tft_lcd_top.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="tft_lcd_top_methodology_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="tft_lcd_top_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="tft_lcd_top_opt.dcp"/>
+  <File Type="OPT-TIMING" Name="tft_lcd_top_timing_summary_opted.rpt"/>
+  <File Type="REPORTS-TCL" Name="tft_lcd_top_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="tft_lcd_top_timing_summary_init.rpt"/>
+  <File Type="PA-TCL" Name="tft_lcd_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/tft_lcd.v">
+    <File Path="$PSRCDIR/sources_1/new/controller.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/wendy_karina/wendy_karina.xci">
+    <File Path="$PSRCDIR/sources_1/new/exam01_combinational_logic.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/exam02_sequential_logic.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/tft_lcd_sv.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/test_top.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/exam03_var_module.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/communication.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -95,7 +145,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/controller.v">
+    <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -103,7 +153,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/exam01_combinational_logic.v">
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -111,31 +161,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/exam02_sequential_logic.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/trackingface_sub.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/trackingface_top.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/communication.v">
+    <File Path="$PSRCDIR/sources_1/ip/wendy_karina/wendy_karina.xci">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -152,6 +178,14 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/ip/adc_2ch_sequence/adc_2ch_sequence.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/CAN_module.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -215,7 +249,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/exam03_var_module.v">
+    <File Path="$PSRCDIR/sources_1/new/mnist_cnn_micro.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -223,7 +257,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/test_top.v">
+    <File Path="$PSRCDIR/sources_1/new/tft_lcd.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/trackingface_sub.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/trackingface_top.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -317,7 +367,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ili9341_karina_display"/>
+      <Option Name="TopModule" Val="tft_lcd_top"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -362,5 +412,4 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="jiwoo"/>
 </GenRun>

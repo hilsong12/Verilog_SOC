@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../basys_exam_2025.srcs/sources_1/new/CAN_module.v" \
+"../../../../basys_exam_2025.srcs/sim_1/new/can_simulation.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

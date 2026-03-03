@@ -1,0 +1,15 @@
+axi_gpio_BTN:
+- axi_gpio
+- gpio
+axi_uartlite_0:
+- axi_uartlite
+- uartlite
+microblaze_riscv_0_axi_intc:
+- axi_intc
+- intc
+myip_fnd_cntr_0:
+- myip_fnd_cntr
+- None
+myip_stopwatch_0:
+- myip_stopwatch
+- None

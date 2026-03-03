@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/user12/data/work/can/can.srcs/sources_1/new/can_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module can_master
+INFO: [VRFC 10-311] analyzing module can_prescaler
+INFO: [VRFC 10-311] analyzing module can_bit_timing_pro
+INFO: [VRFC 10-311] analyzing module can_bus_monitor
+INFO: [VRFC 10-311] analyzing module can_destuffing
+INFO: [VRFC 10-311] analyzing module can_stuffing
+INFO: [VRFC 10-311] analyzing module can_rx_shift
+INFO: [VRFC 10-311] analyzing module can_tx_shift
+INFO: [VRFC 10-2263] Analyzing Verilog file "/media/user12/data/work/can/can.srcs/sim_1/new/can_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_can_bit_timing
+INFO: [VRFC 10-311] analyzing module tb_can_phase1
+INFO: [VRFC 10-311] analyzing module tb_can_destuffing
+INFO: [VRFC 10-311] analyzing module tb_can_stuffing
+INFO: [VRFC 10-311] analyzing module tb_can_rx_system
+INFO: [VRFC 10-311] analyzing module tb_can_tx_system

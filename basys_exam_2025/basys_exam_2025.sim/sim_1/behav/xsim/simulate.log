@@ -1,2 +1,4 @@
 Time resolution is 1 ps
-$stop called at time : 23780035 ns : File "/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sim_1/new/tb_dht11_cntr.v" Line 67
+Transaction Start: Node 1 sending 0xAA...
+FAIL: Check Waveform. TX_Done=0, RX_Valid=0, Data=00
+$finish called at time : 221100 ns : File "/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sim_1/new/can_simulation.v" Line 110

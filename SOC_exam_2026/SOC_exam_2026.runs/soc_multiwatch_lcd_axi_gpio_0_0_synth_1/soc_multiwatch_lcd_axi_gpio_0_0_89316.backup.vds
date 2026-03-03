@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Jan 28 16:51:36 2026
+# Process ID         : 89316
+# Current directory  : /media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_axi_gpio_0_0_synth_1
+# Command line       : vivado -log soc_multiwatch_lcd_axi_gpio_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source soc_multiwatch_lcd_axi_gpio_0_0.tcl
+# Log file           : /media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_axi_gpio_0_0_synth_1/soc_multiwatch_lcd_axi_gpio_0_0.vds
+# Journal file       : /media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_axi_gpio_0_0_synth_1/vivado.jou
+# Running On         : user12-B80KV-AP35BKE
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13400
+# CPU Frequency      : 4100.241 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 16
+# Host memory        : 16497 MB
+# Swap memory        : 32000 MB
+# Total Virtual      : 48498 MB
+# Available Virtual  : 38390 MB
+#-----------------------------------------------------------
+source soc_multiwatch_lcd_axi_gpio_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_watch_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/media/user12/data/work/ip_repo/myip_watch_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_watch_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_stopwatch_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_cooktimer_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_iic_cntr_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_dht11_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_fnd_cntr_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/media/user12/data/tools/xilinx/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: soc_multiwatch_lcd_axi_gpio_0_0
+Command: synth_design -top soc_multiwatch_lcd_axi_gpio_0_0 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 89548

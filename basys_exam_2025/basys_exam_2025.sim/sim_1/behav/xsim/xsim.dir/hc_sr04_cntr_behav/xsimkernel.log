@@ -1,7 +1,0 @@
-Running: xsim.dir/hc_sr04_cntr_behav/xsimk -simmode gui -wdb hc_sr04_cntr_behav.wdb -simrunnum 0 -socket 46211
-Design successfully loaded
-Design Loading Memory Usage: 181636 KB (Peak: 181692 KB)
-Design Loading CPU Usage: 690 ms
-Simulation completed
-Simulation Memory Usage: 263372 KB (Peak: 320904 KB)
-Simulation CPU Usage: 690 ms

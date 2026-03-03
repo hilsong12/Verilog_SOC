@@ -83,7 +83,20 @@ int main()
                 
                 usleep(1000); // 1ms 잔상 효과
             }
+
+        
+
+
+
+
+
+            
         }
     cleanup_platform();
     return 0;
 }
+
+//
+
+
+

@@ -1,0 +1,9 @@
+axi_uartlite_0:
+- axi_uartlite
+- uartlite
+myip_dht11_0:
+- myip_dht11
+- None
+myip_iic_cntr_0:
+- myip_iic_cntr
+- None

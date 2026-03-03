@@ -7,4 +7,4 @@
 # Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log ili9341_karina_display.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ili9341_karina_display.tcl -notrace
+vivado -log tft_lcd_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source tft_lcd_top.tcl -notrace

@@ -1,202 +1,347 @@
 
 *** Running vivado
-    with args -log ili9341_karina_display.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ili9341_karina_display.tcl
+    with args -log tft_lcd_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tft_lcd_top.tcl
 
 
 ****** Vivado v2024.2 (64-bit)
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Fri Jan 16 16:37:07 2026
+  **** Start of session at: Tue Mar  3 09:53:09 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
-source ili9341_karina_display.tcl -notrace
+source tft_lcd_top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_CAN_controller_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/media/user12/data/tools/xilinx/Vivado/2024.2/data/ip'.
 Command: read_checkpoint -auto_incremental -incremental /media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/utils_1/imports/synth_1/test_top.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/utils_1/imports/synth_1/test_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top ili9341_karina_display -part xc7a35tcpg236-1
+Command: synth_design -top tft_lcd_top -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 726751
+INFO: [Synth 8-7075] Helper process launched with PID 10589
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1865.344 ; gain = 311.816 ; free physical = 5761 ; free virtual = 38099
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1865.203 ; gain = 319.820 ; free physical = 1524 ; free virtual = 38096
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'ili9341_karina_display' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd.v:356]
-INFO: [Synth 8-6157] synthesizing module 'jiwoo' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.runs/synth_1/.Xil/Vivado-726708-user12-B80KV-AP35BKE/realtime/jiwoo_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'jiwoo' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.runs/synth_1/.Xil/Vivado-726708-user12-B80KV-AP35BKE/realtime/jiwoo_stub.v:6]
-WARNING: [Synth 8-7071] port 'wea' of module 'jiwoo' is unconnected for instance 'your_instance_name' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd.v:393]
-WARNING: [Synth 8-7071] port 'dina' of module 'jiwoo' is unconnected for instance 'your_instance_name' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd.v:393]
-WARNING: [Synth 8-7023] instance 'your_instance_name' of module 'jiwoo' has 5 connections declared, but only 3 given [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd.v:393]
-INFO: [Synth 8-155] case statement is not full and has no default [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd.v:506]
-INFO: [Synth 8-155] case statement is not full and has no default [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd.v:412]
-INFO: [Synth 8-6155] done synthesizing module 'ili9341_karina_display' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd.v:356]
-WARNING: [Synth 8-3917] design ili9341_karina_display has port lcd_led driven by constant 1
+INFO: [Synth 8-6157] synthesizing module 'tft_lcd_top' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/test_top.v:759]
+INFO: [Synth 8-6157] synthesizing module 'lcd_bram' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:233]
+	Parameter DEPTH bound to: 784 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lcd_bram' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:233]
+WARNING: [Synth 8-689] width (10) of port connection 'wr_addr' does not match port width (17) of module 'lcd_bram' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/test_top.v:832]
+WARNING: [Synth 8-689] width (10) of port connection 'rd_addr' does not match port width (17) of module 'lcd_bram' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/test_top.v:836]
+INFO: [Synth 8-6157] synthesizing module 'xpt2046' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:263]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:390]
+INFO: [Synth 8-6155] done synthesizing module 'xpt2046' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:263]
+INFO: [Synth 8-6157] synthesizing module 'tft_sv' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:74]
+INFO: [Synth 8-6157] synthesizing module 'spi' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'spi' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:24]
+INFO: [Synth 8-6155] done synthesizing module 'tft_sv' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:74]
+INFO: [Synth 8-6157] synthesizing module 'bin_to_dec' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/exam01_combinational_logic.v:324]
+INFO: [Synth 8-6155] done synthesizing module 'bin_to_dec' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/exam01_combinational_logic.v:324]
+INFO: [Synth 8-6157] synthesizing module 'FND_cntr' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/controller.v:23]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector_n' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/exam02_sequential_logic.v:292]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector_n' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/exam02_sequential_logic.v:292]
+WARNING: [Synth 8-7071] port 'n_edge' of module 'edge_detector_n' is unconnected for instance 'ed_com' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/controller.v:33]
+WARNING: [Synth 8-7023] instance 'ed_com' of module 'edge_detector_n' has 5 connections declared, but only 4 given [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/controller.v:33]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/controller.v:48]
+INFO: [Synth 8-6157] synthesizing module 'seg_decoder' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/exam01_combinational_logic.v:295]
+INFO: [Synth 8-6155] done synthesizing module 'seg_decoder' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/exam01_combinational_logic.v:295]
+INFO: [Synth 8-6155] done synthesizing module 'FND_cntr' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/controller.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'fnd_value' does not match port width (16) of module 'FND_cntr' [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/test_top.v:926]
+INFO: [Synth 8-6155] done synthesizing module 'tft_lcd_top' (0#1) [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/test_top.v:759]
+WARNING: [Synth 8-7137] Register CONV_DONE_reg in module xpt2046 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:458]
+WARNING: [Synth 8-7137] Register internalData_reg in module spi has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:36]
+WARNING: [Synth 8-7137] Register tft_dc_reg in module spi has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:56]
+WARNING: [Synth 8-7137] Register tft_sdi_reg in module spi has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:57]
+WARNING: [Synth 8-7137] Register counter_reg in module spi has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:57]
+WARNING: [Synth 8-7137] Register frameBufferLowByte_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:94]
+WARNING: [Synth 8-7137] Register x_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:144]
+WARNING: [Synth 8-7137] Register y_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:145]
+WARNING: [Synth 8-7137] Register framebufferIndex_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:146]
+WARNING: [Synth 8-7137] Register state_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:147]
+WARNING: [Synth 8-7137] Register remainingDelayTicks_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:148]
+WARNING: [Synth 8-7137] Register initSeqCounter_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:149]
+WARNING: [Synth 8-7137] Register syncCounter_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:150]
+WARNING: [Synth 8-7137] Register spiDataSet_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:98]
+WARNING: [Synth 8-7137] Register tft_reset_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:162]
+WARNING: [Synth 8-7137] Register spiData_reg in module tft_sv has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/sources_1/new/tft_lcd_sv.sv:98]
+WARNING: [Synth 8-7129] Port tft_sdo in module tft_sv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[16] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[15] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[14] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[13] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[12] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[11] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_addr[10] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[16] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[15] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[14] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[13] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[12] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[11] in module lcd_bram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[10] in module lcd_bram is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1941.312 ; gain = 387.785 ; free physical = 5601 ; free virtual = 38019
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1947.141 ; gain = 401.758 ; free physical = 1421 ; free virtual = 37996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1956.156 ; gain = 402.629 ; free physical = 5602 ; free virtual = 38020
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1964.953 ; gain = 419.570 ; free physical = 1423 ; free virtual = 37998
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1956.156 ; gain = 402.629 ; free physical = 5602 ; free virtual = 38020
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1964.953 ; gain = 419.570 ; free physical = 1423 ; free virtual = 37998
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1956.156 ; gain = 0.000 ; free physical = 5602 ; free virtual = 38020
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1964.953 ; gain = 0.000 ; free physical = 1426 ; free virtual = 38001
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/media/user12/data/work/basys_exam_2025/basys_exam_2025.gen/sources_1/ip/jiwoo/jiwoo/jiwoo_in_context.xdc] for cell 'your_instance_name'
-Finished Parsing XDC File [/media/user12/data/work/basys_exam_2025/basys_exam_2025.gen/sources_1/ip/jiwoo/jiwoo/jiwoo_in_context.xdc] for cell 'your_instance_name'
 Parsing XDC File [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'slide'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:12]
-WARNING: [Vivado 12-584] No ports matched 'slide[1]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:13]
-WARNING: [Vivado 12-584] No ports matched 'slide[2]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:14]
-WARNING: [Vivado 12-584] No ports matched 'slide[3]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:15]
-WARNING: [Vivado 12-584] No ports matched 'slide[4]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:16]
-WARNING: [Vivado 12-584] No ports matched 'slide[5]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:17]
-WARNING: [Vivado 12-584] No ports matched 'slide[6]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:18]
-WARNING: [Vivado 12-584] No ports matched 'slide[7]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:19]
-WARNING: [Vivado 12-584] No ports matched 'slide[8]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:20]
-WARNING: [Vivado 12-584] No ports matched 'slide[9]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:21]
-WARNING: [Vivado 12-584] No ports matched 'slide[10]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:22]
-WARNING: [Vivado 12-584] No ports matched 'slide[11]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:23]
-WARNING: [Vivado 12-584] No ports matched 'slide[12]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:24]
-WARNING: [Vivado 12-584] No ports matched 'slide[13]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:25]
-WARNING: [Vivado 12-584] No ports matched 'slide[14]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:26]
-WARNING: [Vivado 12-584] No ports matched 'slide[15]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:27]
-WARNING: [Vivado 12-584] No ports matched 'data[0]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:31]
-WARNING: [Vivado 12-584] No ports matched 'data[1]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:32]
-WARNING: [Vivado 12-584] No ports matched 'data[2]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:33]
-WARNING: [Vivado 12-584] No ports matched 'data[3]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:34]
-WARNING: [Vivado 12-584] No ports matched 'data[4]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:35]
-WARNING: [Vivado 12-584] No ports matched 'data[5]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:36]
-WARNING: [Vivado 12-584] No ports matched 'data[6]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:37]
-WARNING: [Vivado 12-584] No ports matched 'data[7]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:38]
-WARNING: [Vivado 12-584] No ports matched 'led[8]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:39]
-WARNING: [Vivado 12-584] No ports matched 'led[9]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:40]
-WARNING: [Vivado 12-584] No ports matched 'led[10]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:41]
-WARNING: [Vivado 12-584] No ports matched 'led[11]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_tx1_done'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_rx1_valid'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_tx2_done'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_rx2_valid'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_rx_data[0]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_rx_data[1]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_rx_data[2]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_rx_data[3]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_rx_data[4]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_rx_data[5]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_rx_data[6]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led_rx_data[7]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'led[12]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'led[13]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'led[14]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'done'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:46]
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:50]
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:51]
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:52]
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:53]
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:54]
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:55]
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:56]
-WARNING: [Vivado 12-584] No ports matched 'seg[7]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:58]
-WARNING: [Vivado 12-584] No ports matched 'com[0]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:60]
-WARNING: [Vivado 12-584] No ports matched 'com[1]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:61]
-WARNING: [Vivado 12-584] No ports matched 'com[2]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:62]
-WARNING: [Vivado 12-584] No ports matched 'com[3]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:63]
-WARNING: [Vivado 12-584] No ports matched 'btn_sel'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn_send'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'rst'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'button[2]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'button[3]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'can1_rx'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'can1_tx'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'can2_rx'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'can2_tx'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd_sck'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'lcd_led'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'JA[6]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'JA[7]'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:82]
-WARNING: [Vivado 12-584] No ports matched 'rx_in'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JB'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'vauxp6'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'vauxp15'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'vauxn6'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'vauxn15'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_txd'. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:134]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc:134]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/ili9341_karina_display_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ili9341_karina_display_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/ili9341_karina_display_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/constrs_1/imports/Downloads/Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/tft_lcd_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/tft_lcd_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2078.895 ; gain = 0.000 ; free physical = 5599 ; free virtual = 37967
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2088.723 ; gain = 0.000 ; free physical = 1409 ; free virtual = 37994
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2078.895 ; gain = 0.000 ; free physical = 5599 ; free virtual = 37967
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'your_instance_name' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2088.723 ; gain = 0.000 ; free physical = 1409 ; free virtual = 37994
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2078.895 ; gain = 525.367 ; free physical = 5667 ; free virtual = 38022
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2088.723 ; gain = 543.340 ; free physical = 1427 ; free virtual = 38007
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2086.898 ; gain = 533.371 ; free physical = 5667 ; free virtual = 38022
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2096.727 ; gain = 551.344 ; free physical = 1426 ; free virtual = 38007
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for your_instance_name. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2086.898 ; gain = 533.371 ; free physical = 5667 ; free virtual = 38022
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Preparing Guide Design
----------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6895] The reference checkpoint /media/user12/data/work/basys_exam_2025/basys_exam_2025.srcs/utils_1/imports/synth_1/test_top.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
----------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2086.898 ; gain = 533.371 ; free physical = 5666 ; free virtual = 38022
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2096.727 ; gain = 551.344 ; free physical = 1426 ; free virtual = 38007
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2086.898 ; gain = 533.371 ; free physical = 5666 ; free virtual = 38022
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2096.727 ; gain = 551.344 ; free physical = 1426 ; free virtual = 38007
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2086.898 ; gain = 533.371 ; free physical = 5664 ; free virtual = 38020
----------------------------------------------------------------------------------
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : 
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 1     
-	   2 Input    9 Bit       Adders := 4     
-	   2 Input    8 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 4     
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 1     
+	   4 Input   17 Bit       Adders := 2     
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 25    
+	   2 Input    3 Bit       Adders := 2     
+	   4 Input    3 Bit       Adders := 1     
 +---Registers : 
-	               10 Bit    Registers := 1     
-	                9 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
-	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 6     
+	               24 Bit    Registers := 1     
+	               20 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               12 Bit    Registers := 9     
+	               10 Bit    Registers := 4     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 20    
++---RAMs : 
+	               6K Bit	(785 X 8 bit)          RAMs := 1     
 +---Muxes : 
-	  10 Input   32 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 2     
-	   2 Input    9 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 4     
-	  10 Input    8 Bit        Muxes := 1     
-	  11 Input    8 Bit        Muxes := 1     
-	   4 Input    8 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 3     
-	  10 Input    4 Bit        Muxes := 1     
-	   4 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 2     
-	  10 Input    3 Bit        Muxes := 1     
-	  11 Input    3 Bit        Muxes := 1     
-	  10 Input    1 Bit        Muxes := 15    
-	   2 Input    1 Bit        Muxes := 15    
-	   4 Input    1 Bit        Muxes := 5     
-	   3 Input    1 Bit        Muxes := 1     
-	  11 Input    1 Bit        Muxes := 2     
+	   2 Input   24 Bit        Muxes := 5     
+	   6 Input   24 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 2     
+	   2 Input   18 Bit        Muxes := 4     
+	   6 Input   18 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 5     
+	   2 Input   10 Bit        Muxes := 8     
+	   6 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 5     
+	  12 Input    9 Bit        Muxes := 1     
+	   6 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 7     
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 30    
+	   6 Input    4 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 37    
+	  47 Input    1 Bit        Muxes := 3     
+	   6 Input    1 Bit        Muxes := 11    
+	   5 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -213,26 +358,49 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP rom_addr, operation Mode is: C'+A2*(B:0xf0).
-DSP Report: register rom_addr is absorbed into DSP rom_addr.
-DSP Report: register x_cnt_reg is absorbed into DSP rom_addr.
-DSP Report: operator rom_addr is absorbed into DSP rom_addr.
-DSP Report: operator rom_addr0 is absorbed into DSP rom_addr.
-WARNING: [Synth 8-3917] design ili9341_karina_display has port lcd_led driven by constant 1
+DSP Report: Generating DSP touch_x_raw0, operation Mode is: A*(B:0x46).
+DSP Report: operator touch_x_raw0 is absorbed into DSP touch_x_raw0.
+DSP Report: Generating DSP touch_y_3200, operation Mode is: A*(B:0x5e).
+DSP Report: operator touch_y_3200 is absorbed into DSP touch_y_3200.
+WARNING: [Synth 8-7129] Port tft_sdo in module tft_sv is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2086.898 ; gain = 533.371 ; free physical = 5651 ; free virtual = 38014
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2096.727 ; gain = 551.344 ; free physical = 1415 ; free virtual = 38003
 ---------------------------------------------------------------------------------
- Sort Area is  rom_addr_0 : 0 0 : 277 277 : Used 1 time 0
+ Sort Area is  touch_x_raw0_0 : 0 0 : 124 124 : Used 1 time 0
+ Sort Area is  touch_y_3200_2 : 0 0 : 124 124 : Used 1 time 0
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|xpt2046     | DCLK       | 64x1          | LUT            | 
+|xpt2046     | DIN        | 64x1          | LUT            | 
+|tft_sv      | INIT_SEQ   | 64x9          | LUT            | 
+|xpt2046     | DCLK       | 64x1          | LUT            | 
+|xpt2046     | DIN        | 64x1          | LUT            | 
+|tft_sv      | p_0_out    | 64x9          | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|tft_lcd_top | lcd_mem/ram_reg | 785 x 8(READ_FIRST)    | W |   | 785 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+-----------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name            | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-----------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|ili9341_karina_display | C'+A2*(B:0xf0) | 10     | 8      | 9      | -      | 17     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
-+-----------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|tft_lcd_top | A*(B:0x46)  | 12     | 7      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|tft_lcd_top | A*(B:0x5e)  | 12     | 7      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -242,19 +410,34 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2147.898 ; gain = 594.371 ; free physical = 5510 ; free virtual = 37862
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2152.727 ; gain = 607.344 ; free physical = 1279 ; free virtual = 37878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2183.945 ; gain = 630.418 ; free physical = 5478 ; free virtual = 37831
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2153.727 ; gain = 608.344 ; free physical = 1279 ; free virtual = 37878
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|tft_lcd_top | lcd_mem/ram_reg | 785 x 8(READ_FIRST)    | W |   | 785 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------+-----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance lcd_mem/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2191.953 ; gain = 638.426 ; free physical = 5470 ; free virtual = 37823
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2172.758 ; gain = 627.375 ; free physical = 1263 ; free virtual = 37863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -271,120 +454,103 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin wea[0]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[15]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[14]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[13]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[12]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[11]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[10]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[9]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[8]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[7]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[6]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[5]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[4]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[3]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[2]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[1]
-CRITICAL WARNING: [Synth 8-4442] BlackBox module your_instance_name has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2331.766 ; gain = 778.238 ; free physical = 5359 ; free virtual = 37709
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2333.570 ; gain = 788.188 ; free physical = 1129 ; free virtual = 37726
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2331.766 ; gain = 778.238 ; free physical = 5359 ; free virtual = 37709
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2333.570 ; gain = 788.188 ; free physical = 1129 ; free virtual = 37726
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2331.766 ; gain = 778.238 ; free physical = 5359 ; free virtual = 37709
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2333.570 ; gain = 788.188 ; free physical = 1129 ; free virtual = 37726
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2331.766 ; gain = 778.238 ; free physical = 5359 ; free virtual = 37709
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2333.570 ; gain = 788.188 ; free physical = 1129 ; free virtual = 37726
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2331.766 ; gain = 778.238 ; free physical = 5359 ; free virtual = 37709
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2336.539 ; gain = 791.156 ; free physical = 1129 ; free virtual = 37726
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2331.766 ; gain = 778.238 ; free physical = 5359 ; free virtual = 37709
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2336.539 ; gain = 791.156 ; free physical = 1129 ; free virtual = 37726
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+-----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name            | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+-----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|ili9341_karina_display | C'+A'*B     | 9      | 8      | 8      | -      | 17     | 1    | 0    | 1    | -    | -     | 0    | 0    | 
-+-----------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|tft_lcd_top | A*B         | 12     | 7      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|tft_lcd_top | A*B         | 12     | 7      | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
-+------+--------------+----------+
-|      |BlackBox name |Instances |
-+------+--------------+----------+
-|1     |jiwoo         |         1|
-+------+--------------+----------+
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |jiwoo   |     1|
-|2     |BUFG    |     1|
-|3     |CARRY4  |    13|
-|4     |DSP48E1 |     1|
-|5     |LUT1    |     5|
-|6     |LUT2    |    12|
-|7     |LUT3    |    17|
-|8     |LUT4    |    29|
-|9     |LUT5    |    24|
-|10    |LUT6    |    80|
-|11    |MUXF7   |     2|
-|12    |FDRE    |    96|
-|13    |FDSE    |     3|
-|14    |IBUF    |     2|
-|15    |OBUF    |     6|
-+------+--------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |    52|
+|3     |DSP48E1  |     2|
+|4     |LUT1     |    49|
+|5     |LUT2     |   101|
+|6     |LUT3     |   102|
+|7     |LUT4     |    93|
+|8     |LUT5     |    67|
+|9     |LUT6     |   140|
+|10    |RAMB18E1 |     1|
+|11    |FDCE     |   269|
+|12    |FDPE     |     5|
+|13    |FDRE     |    48|
+|14    |IBUF     |     4|
+|15    |OBUF     |    20|
++------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2331.766 ; gain = 778.238 ; free physical = 5359 ; free virtual = 37709
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2336.539 ; gain = 791.156 ; free physical = 1129 ; free virtual = 37726
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 18 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2331.766 ; gain = 655.500 ; free physical = 5352 ; free virtual = 37703
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2331.773 ; gain = 778.238 ; free physical = 5352 ; free virtual = 37703
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2336.539 ; gain = 667.387 ; free physical = 1125 ; free virtual = 37722
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2336.547 ; gain = 791.156 ; free physical = 1125 ; free virtual = 37722
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2331.773 ; gain = 0.000 ; free physical = 5352 ; free virtual = 37703
-INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2336.547 ; gain = 0.000 ; free physical = 1126 ; free virtual = 37723
+INFO: [Netlist 29-17] Analyzing 55 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2387.793 ; gain = 0.000 ; free physical = 5498 ; free virtual = 37850
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2392.566 ; gain = 0.000 ; free physical = 1287 ; free virtual = 37884
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 21ad58c
+Synth Design complete | Checksum: 34328822
 INFO: [Common 17-83] Releasing license: Synthesis
-24 Infos, 63 Warnings, 18 Critical Warnings and 0 Errors encountered.
+45 Infos, 88 Warnings, 50 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2387.793 ; gain = 954.324 ; free physical = 5498 ; free virtual = 37850
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1541.151; main = 1541.151; forked = 268.136
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3007.766; main = 2387.797; forked = 920.863
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2392.566 ; gain = 959.238 ; free physical = 1288 ; free virtual = 37885
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1549.684; main = 1549.684; forked = 269.472
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3017.617; main = 2392.570; forked = 920.887
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2411.805 ; gain = 0.000 ; free physical = 5499 ; free virtual = 37850
-INFO: [Common 17-1381] The checkpoint '/media/user12/data/work/basys_exam_2025/basys_exam_2025.runs/synth_1/ili9341_karina_display.dcp' has been generated.
-INFO: [Vivado 12-24828] Executing command : report_utilization -file ili9341_karina_display_utilization_synth.rpt -pb ili9341_karina_display_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 16 16:37:26 2026...
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2416.578 ; gain = 0.000 ; free physical = 1287 ; free virtual = 37884
+INFO: [Common 17-1381] The checkpoint '/media/user12/data/work/basys_exam_2025/basys_exam_2025.runs/synth_1/tft_lcd_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file tft_lcd_top_utilization_synth.rpt -pb tft_lcd_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Mar  3 09:53:31 2026...

@@ -1,0 +1,13 @@
+vhdl xil_defaultlib  \
+"../../../bd/soc_can/ip/soc_can_proc_sys_reset_0_0/sim/soc_can_proc_sys_reset_0_0.vhd" \
+"../../../bd/soc_can/ip/soc_can_microblaze_riscv_0_0/sim/soc_can_microblaze_riscv_0_0.vhd" \
+"../../../bd/soc_can/ip/soc_can_dlmb_v10_0/sim/soc_can_dlmb_v10_0.vhd" \
+"../../../bd/soc_can/ip/soc_can_ilmb_v10_0/sim/soc_can_ilmb_v10_0.vhd" \
+"../../../bd/soc_can/ip/soc_can_dlmb_bram_if_cntlr_0/sim/soc_can_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/soc_can/ip/soc_can_ilmb_bram_if_cntlr_0/sim/soc_can_ilmb_bram_if_cntlr_0.vhd" \
+"../../../bd/soc_can/ip/soc_can_microblaze_riscv_0_axi_intc_0/sim/soc_can_microblaze_riscv_0_axi_intc_0.vhd" \
+"../../../bd/soc_can/ip/soc_can_mdm_1_0/sim/soc_can_mdm_1_0.vhd" \
+"../../../bd/soc_can/ip/soc_can_axi_uartlite_0_0/sim/soc_can_axi_uartlite_0_0.vhd" \
+
+# Do not sort compile order
+nosort

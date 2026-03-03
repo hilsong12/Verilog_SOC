@@ -1,5 +1,16 @@
 [
-  "/media/user12/data/work/soc_2026_workspace/platform_gpio/export/platform_gpio",
+  "/media/user12/data/work/soc_2026_workspace/platform_stopwatch_fnd/export/platform_stopwatch_fnd",
+  "/media/user12/data/work/soc_2026_workspace/platform_cooktimer_re/export/platform_cooktimer_re",
+  "/media/user12/data/work/soc_2026_workspace/platform_i2c_lcd_cntr/export/platform_i2c_lcd_cntr",
+  "/media/user12/data/work/soc_2026_workspace/platform__iic_lcd_cntr/export/platform__iic_lcd_cntr",
+  "/media/user12/data/work/soc_2026_workspace/platform_iic/export/platform_iic",
+  "/media/user12/data/work/soc_2026_workspace/platform_fnd/export/platform_fnd",
   "/media/user12/data/work/soc_2026_workspace/microblazev_hello/export/microblazev_hello",
-  "/media/user12/data/work/soc_2026_workspace/platform_fnd/export/platform_fnd"
+  "/media/user12/data/work/soc_2026_workspace/platform_gpio/export/platform_gpio",
+  "/media/user12/data/work/soc_2026_workspace/platform_dht11_fnd/export/platform_dht11_fnd",
+  "/media/user12/data/work/soc_2026_workspace/platform_fnd_cntr/export/platform_fnd_cntr",
+  "/media/user12/data/work/soc_2026_workspace/platform_cooktimer_fnd/export/platform_cooktimer_fnd",
+  "/media/user12/data/work/soc_2026_workspace/platform_dht_lcd/export/platform_dht_lcd",
+  "/media/user12/data/work/soc_2026_workspace/platform_multiwatch_lcd/export/platform_multiwatch_lcd",
+  "/media/user12/data/work/soc_2026_workspace/platform_can_controller/export/platform_can_controller"
 ]

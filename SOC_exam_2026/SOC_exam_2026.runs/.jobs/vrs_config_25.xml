@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="soc_multiwatch_lcd_axi_gpio_0_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_clk_wiz_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_lmb_bram_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_lmb_bram_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_microblaze_riscv_0_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_microblaze_riscv_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_microblaze_riscv_0_axi_intc_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_microblaze_riscv_0_axi_intc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_microblaze_riscv_0_axi_periph_imp_xbar_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_microblaze_riscv_0_axi_periph_imp_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_myip_cooktimer_0_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_cooktimer_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_myip_fnd_cntr_0_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_fnd_cntr_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_myip_iic_cntr_0_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_iic_cntr_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_myip_iic_cntr_1_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_iic_cntr_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="soc_multiwatch_lcd_myip_iic_cntr_0_0_synth_1"/>
+	</Run>
+	<Run Id="soc_multiwatch_lcd_myip_stopwatch_0_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_stopwatch_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="soc_multiwatch_lcd_myip_watch_0_0_synth_1" LaunchDir="/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_watch_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

@@ -1,0 +1,52 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.578023",
+   "Default View_TopLeft":"88,-88",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
+#  -string -flagsOSRD
+preplace port usb_uart -pg 1 -lvl 7 -x 1940 -y 350 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -40 -y 500 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -40 -y 580 -defaultsOSRD
+preplace port port-id_dht11_data_0 -pg 1 -lvl 7 -x 1940 -y 80 -defaultsOSRD
+preplace port port-id_scl_0 -pg 1 -lvl 7 -x 1940 -y 200 -defaultsOSRD
+preplace port port-id_sda_0 -pg 1 -lvl 7 -x 1940 -y 230 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -x 590 -y 520 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 2 -x 310 -y 570 -defaultsOSRD
+preplace inst microblaze_riscv_0 -pg 1 -lvl 4 -x 1060 -y 350 -defaultsOSRD
+preplace inst microblaze_riscv_0_local_memory -pg 1 -lvl 5 -x 1480 -y 360 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 3 -x 590 -y 350 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 6 -x 1790 -y 360 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -x 1480 -y 180 -defaultsOSRD
+preplace inst myip_dht11_0 -pg 1 -lvl 6 -x 1790 -y 80 -defaultsOSRD
+preplace inst myip_iic_cntr_0 -pg 1 -lvl 6 -x 1790 -y 220 -defaultsOSRD
+preplace inst myip_cooktimer_0 -pg 1 -lvl 1 -x 110 -y -10 -defaultsOSRD
+preplace netloc reset_1 1 0 3 N 500 220 500 NJ
+preplace netloc microblaze_riscv_0_Clk 1 0 6 -20 270 N 270 400 420 800 440 1330 90 1650
+preplace netloc sys_clock_1 1 0 2 NJ 580 N
+preplace netloc proc_sys_reset_0_mb_reset 1 3 1 790 380n
+preplace netloc proc_sys_reset_0_bus_struct_reset 1 3 2 N 500 1340J
+preplace netloc mdm_1_debug_sys_rst 1 2 2 410 280 770
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 6 0 260 N 260 N 260 780J 260 1340 270 1660
+preplace netloc Net 1 6 1 N 80
+preplace netloc myip_iic_cntr_0_scl 1 6 1 1920 200n
+preplace netloc myip_iic_cntr_0_sda 1 6 1 N 230
+preplace netloc microblaze_riscv_0_dlmb_1 1 4 1 N 330
+preplace netloc microblaze_riscv_0_ilmb_1 1 4 1 N 350
+preplace netloc microblaze_riscv_0_debug 1 3 1 N 340
+preplace netloc axi_uartlite_0_UART 1 6 1 N 350
+preplace netloc microblaze_riscv_0_M_AXI_DP 1 4 1 1320 160n
+preplace netloc axi_smc_M00_AXI 1 5 1 1640 150n
+preplace netloc axi_smc_M01_AXI 1 5 1 1630 60n
+preplace netloc axi_smc_M02_AXI 1 5 1 1630 190n
+preplace netloc axi_smc_M03_AXI 1 0 6 -10 70 NJ 70 NJ 70 NJ 70 NJ 70 1620
+levelinfo -pg 1 -40 110 310 590 1060 1480 1790 1940
+pagesize -pg 1 -db -bbox -sgen -150 -90 2090 640
+"
+}
+{
+   "da_axi4_cnt":"4",
+   "da_board_cnt":"2",
+   "da_clkrst_cnt":"1",
+   "da_microblaze_riscv_cnt":"1"
+}

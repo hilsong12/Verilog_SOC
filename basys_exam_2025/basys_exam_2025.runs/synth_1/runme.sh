@@ -37,4 +37,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ili9341_karina_display.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ili9341_karina_display.tcl
+EAStep vivado -log tft_lcd_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tft_lcd_top.tcl

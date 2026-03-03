@@ -756,6 +756,176 @@ endmodule
 
 
 
+module tft_lcd_top(
+    input clk, reset_p,
+    input tft_sdo, 
+    output tft_sck, 
+    output tft_sdi, 
+    output tft_dc, 
+    output tft_reset, 
+    output tft_cs,
+    
+    input PenIrq_n,
+    output DCLK,
+    output DIN,
+    output CS_N,
+    input  DOUT,
+    
+    output [3:0] com,
+    output [7:0] seg
+);
+    
+    // =========================================================
+    // 1. 디스플레이 Y좌표 동기화 복원 (tft_sv 수정 없이 x로 유추)
+    // =========================================================
+    wire [9:0] x;
+    reg [8:0] y; 
+    reg [9:0] prev_x;     
+
+    always @(posedge clk or posedge reset_p) begin
+        if (reset_p) begin
+            y <= 0;
+            prev_x <= 0;
+        end else begin
+            prev_x <= x; 
+            // x가 479 끝까지 갔다가 0으로 떨어질 때 y를 1 증가
+            if (prev_x == 479 && x == 0) begin
+                if (y >= 319) y <= 0;
+                else y <= y + 1;
+            end
+        end
+    end
+
+    // =========================================================
+    // 2. 28x28 중앙 박스 출력 설정 (LCD 매핑)
+    // =========================================================
+    // 28 * 8(확대) = 224 크기. 화면(240x320) 중앙에 배치하기 위한 여백(Offset) 계산:
+    // 가로 시작점: (240 - 224) / 2 = 8
+    // 세로 시작점: (320 - 224) / 2 = 48
+    wire [7:0] lcd_px = x[9:1]; // 0 ~ 239 물리 픽셀
+    wire [8:0] lcd_py = y;      // 0 ~ 319 물리 픽셀
+
+    // 현재 스캔하는 곳이 224x224 중앙 박스 내부인지 확인
+    wire in_box_lcd = (lcd_px >= 8 && lcd_px < 232 && lcd_py >= 48 && lcd_py < 272);
+    
+    // 픽셀을 28x28 인덱스로 변환 (여백을 빼고 8로 나눔: >> 3)
+    wire [4:0] grid_x_lcd = (lcd_px - 8) >> 3; 
+    wire [4:0] grid_y_lcd = (lcd_py - 48) >> 3;
+
+    reg [9:0] rd_addr; // BRAM 최대 784이므로 10비트
+    always @(*) begin
+        if (in_box_lcd) rd_addr = (grid_y_lcd * 28) + grid_x_lcd;
+        else rd_addr = 0; 
+    end
+
+    // =========================================================
+    // 3. 초소형 BRAM (28 * 28 = 784)
+    // =========================================================
+    reg [9:0] wr_addr;
+    reg [7:0] data_to_ram;
+    wire [7:0] data_from_ram;
+    reg wr_en_reg; // 터치 입력 제한을 위해 내부 레지스터 사용
+
+    lcd_bram #(.DEPTH(28*28)) lcd_mem(
+        .wclk(clk),
+        .wr_en(wr_en_reg), // 조건에 맞을 때만 1이 됨
+        .wr_addr(wr_addr),
+        
+        .rclk(clk),
+        .rd_en(1'b1),
+        .rd_addr(rd_addr),
+        
+        .bram_en(1'b1),
+        .data_to_ram(data_to_ram),
+        .data_from_ram(data_from_ram)
+    );
+
+    // =========================================================
+    // 4. 터치패드 제어 및 캘리브레이션
+    // =========================================================
+    reg Clk50M = 0;
+    always @(posedge clk) Clk50M <= ~Clk50M; // 클럭 토글 방식으로 안정화
+    wire Rst_n = ~reset_p;
+    
+    wire [11:0] X_Value, Y_Value;
+    wire Get_Flag;
+    
+    xpt2046 touch_pad(Clk50M, Rst_n, 1'b1, X_Value, Y_Value, Get_Flag, PenIrq_n, DCLK, DIN, DOUT, CS_N);
+
+    // 노이즈 제거
+    wire [11:0] x_tmp = (X_Value > 12'd300) ? (X_Value - 12'd300) : 12'd0;
+    wire [11:0] y_tmp = (Y_Value > 12'd300) ? (Y_Value - 12'd300) : 12'd0;
+
+    // 터치 좌표를 240x320 해상도로 변환 (오버플로우 방지를 위해 32비트 연산 사용)
+    wire [15:0] touch_x_raw = ((x_tmp * 32'd70) >> 10) + 16'd0; // X축 영점 조절
+    wire [15:0] touch_y_320 = ((y_tmp * 32'd94) >> 10);
+    wire [15:0] touch_y_raw = ((16'd319 > touch_y_320) ? (16'd319 - touch_y_320) : 16'd0) + 16'd0; // Y축 영점 조절
+
+    // 화면 이탈 방지
+    wire [15:0] t_x = (touch_x_raw > 239) ? 239 : touch_x_raw;
+    wire [15:0] t_y = (touch_y_raw > 319) ? 319 : touch_y_raw;
+
+    // =========================================================
+    // 5. 입력 제한 (Bounding Box 내부만 터치 허용)
+    // =========================================================
+    // 터치한 곳이 224x224 중앙 박스 내부인지 확인
+    wire in_box_touch = (t_x >= 8 && t_x < 232 && t_y >= 48 && t_y < 272);
+    
+    // 터치 좌표를 28x28 그리드 인덱스로 변환
+    wire [4:0] grid_x_touch = (t_x - 8) >> 3;
+    wire [4:0] grid_y_touch = (t_y - 48) >> 3;
+
+    always @(posedge clk or posedge reset_p) begin
+        if(reset_p) begin
+            wr_addr <= 0;
+            data_to_ram <= 0;
+            wr_en_reg <= 0;
+        end
+        else begin
+            // 터치펜이 눌려있고(~PenIrq_n), 동시에 박스 안(in_box_touch)일 때만 쓰기 활성화
+            if (~PenIrq_n && in_box_touch) begin
+                wr_addr <= (grid_y_touch * 28) + grid_x_touch;
+                data_to_ram <= 8'hFF; // 흰색
+                wr_en_reg <= 1'b1;    // BRAM에 쓰기 허용
+            end else begin
+                wr_en_reg <= 1'b0;    // 박스 밖이면 무시 (입력 제한)
+            end
+        end
+    end
+
+    // =========================================================
+    // 6. TFT LCD 디스플레이 출력
+    // =========================================================
+    // 박스 내부는 BRAM(그림), 박스 외부는 어두운 회색(8'h20)으로 테두리 표시
+    wire [7:0] display_data = in_box_lcd ? data_from_ram : 8'h20; 
+    wire framebufferClk;
+    wire [17:0] framebufferIndex;
+
+    tft_sv lcd(
+        .clk(clk), 
+        .reset_p(reset_p), 
+        .tft_sdo(tft_sdo), 
+        .tft_sck(tft_sck), 
+        .tft_sdi(tft_sdi), 
+        .tft_dc(tft_dc), 
+        .tft_reset(tft_reset), 
+        .tft_cs(tft_cs),
+        .framebufferData({8'b0, display_data}), 
+        .framebufferClk(framebufferClk), 
+        .framebufferIndex(framebufferIndex), 
+        .x(x)
+    );
+    
+    // =========================================================
+    // 7. FND 출력 (기존 오류 수정)
+    // =========================================================
+    wire [15:0] bcd_value;
+    wire [15:0] sec_bcd = 16'h0000; // 원본에서 누락된 sec_bcd 임시 생성
+    bin_to_dec btd_x(.bin(X_Value), .bcd(bcd_value));
+    
+    FND_cntr fnd(.clk(clk), .reset_p(reset_p), .fnd_value({bcd_value, sec_bcd}), .seg(seg), .com(com));
+    
+endmodule
 
 
 

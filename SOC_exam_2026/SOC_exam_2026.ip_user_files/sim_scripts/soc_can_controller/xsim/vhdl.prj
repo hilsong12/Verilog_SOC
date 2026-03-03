@@ -1,0 +1,13 @@
+vhdl xil_defaultlib  \
+"../../../bd/soc_can_controller/ip/soc_can_controller_proc_sys_reset_0_0/sim/soc_can_controller_proc_sys_reset_0_0.vhd" \
+"../../../bd/soc_can_controller/ip/soc_can_controller_microblaze_riscv_0_0/sim/soc_can_controller_microblaze_riscv_0_0.vhd" \
+"../../../bd/soc_can_controller/ip/soc_can_controller_dlmb_v10_0/sim/soc_can_controller_dlmb_v10_0.vhd" \
+"../../../bd/soc_can_controller/ip/soc_can_controller_ilmb_v10_0/sim/soc_can_controller_ilmb_v10_0.vhd" \
+"../../../bd/soc_can_controller/ip/soc_can_controller_dlmb_bram_if_cntlr_0/sim/soc_can_controller_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/soc_can_controller/ip/soc_can_controller_ilmb_bram_if_cntlr_0/sim/soc_can_controller_ilmb_bram_if_cntlr_0.vhd" \
+"../../../bd/soc_can_controller/ip/soc_can_controller_microblaze_riscv_0_axi_intc_0/sim/soc_can_controller_microblaze_riscv_0_axi_intc_0.vhd" \
+"../../../bd/soc_can_controller/ip/soc_can_controller_mdm_1_0/sim/soc_can_controller_mdm_1_0.vhd" \
+"../../../bd/soc_can_controller/ip/soc_can_controller_axi_uartlite_0_0/sim/soc_can_controller_axi_uartlite_0_0.vhd" \
+
+# Do not sort compile order
+nosort

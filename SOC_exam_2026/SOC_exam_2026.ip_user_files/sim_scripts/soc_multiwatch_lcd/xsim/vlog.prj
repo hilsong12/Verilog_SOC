@@ -1,0 +1,37 @@
+verilog xil_defaultlib --include "/media/user12/data/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/3cbc" --include "../../../../SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/ec67/hdl" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_clk_wiz_0/soc_multiwatch_lcd_clk_wiz_0_clk_wiz.v" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_clk_wiz_0/soc_multiwatch_lcd_clk_wiz_0.v" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_lmb_bram_0/sim/soc_multiwatch_lcd_lmb_bram_0.v" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_microblaze_riscv_0_axi_periph_imp_xbar_0/sim/soc_multiwatch_lcd_microblaze_riscv_0_axi_periph_imp_xbar_0.v" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_microblaze_riscv_0_xlconcat_0/sim/soc_multiwatch_lcd_microblaze_riscv_0_xlconcat_0.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/2df6/hdl/myip_fnd_cntr_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/2df6/src/controller.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/2df6/src/exam01_combinational_logic.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/2df6/src/exam02_sequential_logic.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/2df6/hdl/myip_fnd_cntr.v" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_myip_fnd_cntr_0_0/sim/soc_multiwatch_lcd_myip_fnd_cntr_0_0.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/bd78/hdl/myip_cooktimer_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/bd78/src/exam03_var_module.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/bd78/hdl/myip_cooktimer.v" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_myip_cooktimer_0_0/sim/soc_multiwatch_lcd_myip_cooktimer_0_0.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/8608/hdl/myip_stopwatch_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/8608/hdl/myip_stopwatch.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/8608/src/exam03_var_module.v" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_myip_stopwatch_0_0/sim/soc_multiwatch_lcd_myip_stopwatch_0_0.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/e6c5/src/clock_library.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr.v" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_myip_iic_cntr_0_0/sim/soc_multiwatch_lcd_myip_iic_cntr_0_0.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/b10b/hdl/myip_watch_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/b10b/src/exam03_var_module.v" \
+"../../../bd/soc_multiwatch_lcd/ipshared/b10b/hdl/myip_watch.v" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_myip_watch_0_0/sim/soc_multiwatch_lcd_myip_watch_0_0.v" \
+"../../../bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_myip_iic_cntr_1_0/sim/soc_multiwatch_lcd_myip_iic_cntr_1_0.v" \
+"../../../bd/soc_multiwatch_lcd/sim/soc_multiwatch_lcd.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

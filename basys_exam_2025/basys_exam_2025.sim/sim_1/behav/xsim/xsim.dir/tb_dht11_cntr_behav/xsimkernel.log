@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_dht11_cntr_behav/xsimk -simmode gui -wdb tb_dht11_cntr_behav.wdb -simrunnum 0 -socket 60579
-Design successfully loaded
-Design Loading Memory Usage: 181648 KB (Peak: 181704 KB)
-Design Loading CPU Usage: 660 ms
-Simulation completed
-Simulation Memory Usage: 263384 KB (Peak: 320916 KB)
-Simulation CPU Usage: 1200 ms

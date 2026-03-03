@@ -1,0 +1,6 @@
+axi_uartlite_0:
+- axi_uartlite
+- uartlite
+myip_iic_cntr_0:
+- myip_iic_cntr
+- None

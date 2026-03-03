@@ -1,0 +1,353 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Wed Jan 28 19:21:54 2026
+# Process ID         : 100236
+# Current directory  : /media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_iic_cntr_0_0_synth_1
+# Command line       : vivado -log soc_multiwatch_lcd_myip_iic_cntr_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source soc_multiwatch_lcd_myip_iic_cntr_0_0.tcl
+# Log file           : /media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_iic_cntr_0_0_synth_1/soc_multiwatch_lcd_myip_iic_cntr_0_0.vds
+# Journal file       : /media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_iic_cntr_0_0_synth_1/vivado.jou
+# Running On         : user12-B80KV-AP35BKE
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i5-13400
+# CPU Frequency      : 4099.921 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 16
+# Host memory        : 16497 MB
+# Swap memory        : 32000 MB
+# Total Virtual      : 48498 MB
+# Available Virtual  : 41127 MB
+#-----------------------------------------------------------
+source soc_multiwatch_lcd_myip_iic_cntr_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_watch_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/media/user12/data/work/ip_repo/myip_watch_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_watch_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_stopwatch_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_cooktimer_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_iic_cntr_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_dht11_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/media/user12/data/work/ip_repo/myip_fnd_cntr_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/media/user12/data/tools/xilinx/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: soc_multiwatch_lcd_myip_iic_cntr_0_0
+Command: synth_design -top soc_multiwatch_lcd_myip_iic_cntr_0_0 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 101329
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1848.613 ; gain = 420.797 ; free physical = 4395 ; free virtual = 36006
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'send_buffer_byte', assumed default net type 'wire' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:646]
+INFO: [Synth 8-11241] undeclared symbol 'send_byte', assumed default net type 'wire' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:647]
+INFO: [Synth 8-11241] undeclared symbol 'rs_byte', assumed default net type 'wire' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:647]
+WARNING: [Synth 8-8895] 'send_byte' is already implicitly declared on line 647 [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:661]
+WARNING: [Synth 8-8895] 'rs_byte' is already implicitly declared on line 647 [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:661]
+WARNING: [Synth 8-8895] 'send_buffer_byte' is already implicitly declared on line 646 [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:662]
+INFO: [Synth 8-6157] synthesizing module 'soc_multiwatch_lcd_myip_iic_cntr_0_0' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_myip_iic_cntr_0_0/synth/soc_multiwatch_lcd_myip_iic_cntr_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'myip_iic_cntr' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr.v:4]
+INFO: [Synth 8-6157] synthesizing module 'myip_iic_cntr_slave_lite_v1_0_S00_AXI' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v:145]
+INFO: [Synth 8-226] default block is never used [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v:223]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v:308]
+INFO: [Synth 8-6157] synthesizing module 'i2c_txtlcd_top' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:622]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector_p' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/exam02_sequential_logic.v:315]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector_p' (0#1) [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/exam02_sequential_logic.v:315]
+WARNING: [Synth 8-7071] port 'n_edge' of module 'edge_detector_p' is unconnected for instance 'ed_send' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:631]
+WARNING: [Synth 8-7023] instance 'ed_send' of module 'edge_detector_p' has 5 connections declared, but only 4 given [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:631]
+INFO: [Synth 8-6157] synthesizing module 'i2c_lcd_send_byte' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:501]
+INFO: [Synth 8-6157] synthesizing module 'clock_usec' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/clock_library.v:23]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector_n' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/exam02_sequential_logic.v:292]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector_n' (0#1) [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/exam02_sequential_logic.v:292]
+INFO: [Synth 8-6155] done synthesizing module 'clock_usec' (0#1) [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/clock_library.v:23]
+WARNING: [Synth 8-7071] port 'clk_usec' of module 'clock_usec' is unconnected for instance 'usec_clk' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:518]
+WARNING: [Synth 8-7071] port 'clk_usec_pedge' of module 'clock_usec' is unconnected for instance 'usec_clk' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:518]
+WARNING: [Synth 8-7023] instance 'usec_clk' of module 'clock_usec' has 5 connections declared, but only 3 given [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:518]
+WARNING: [Synth 8-7071] port 'n_edge' of module 'edge_detector_p' is unconnected for instance 'ed_start' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:522]
+WARNING: [Synth 8-7023] instance 'ed_start' of module 'edge_detector_p' has 5 connections declared, but only 4 given [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:522]
+INFO: [Synth 8-6157] synthesizing module 'I2C_master' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:361]
+WARNING: [Synth 8-7071] port 'clk_usec' of module 'clock_usec' is unconnected for instance 'usec_clk' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:381]
+WARNING: [Synth 8-7071] port 'clk_usec_pedge' of module 'clock_usec' is unconnected for instance 'usec_clk' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:381]
+WARNING: [Synth 8-7023] instance 'usec_clk' of module 'clock_usec' has 5 connections declared, but only 3 given [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:381]
+WARNING: [Synth 8-7071] port 'n_edge' of module 'edge_detector_p' is unconnected for instance 'ed_start' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:385]
+WARNING: [Synth 8-7023] instance 'ed_start' of module 'edge_detector_p' has 5 connections declared, but only 4 given [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:385]
+INFO: [Synth 8-6155] done synthesizing module 'I2C_master' (0#1) [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:361]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_lcd_send_byte' (0#1) [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/controller.v:501]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:700]
+INFO: [Synth 8-155] case statement is not full and has no default [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:674]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_txtlcd_top' (0#1) [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/src/test_top.v:622]
+WARNING: [Synth 8-689] width (32) of port connection 'send_buffer' does not match port width (8) of module 'i2c_txtlcd_top' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v:355]
+WARNING: [Synth 8-7071] port 'led' of module 'i2c_txtlcd_top' is unconnected for instance 'iic_lcd' [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v:355]
+WARNING: [Synth 8-7023] instance 'iic_lcd' of module 'i2c_txtlcd_top' has 9 connections declared, but only 8 given [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v:355]
+INFO: [Synth 8-6155] done synthesizing module 'myip_iic_cntr_slave_lite_v1_0_S00_AXI' (0#1) [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'myip_iic_cntr' (0#1) [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'soc_multiwatch_lcd_myip_iic_cntr_0_0' (0#1) [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ip/soc_multiwatch_lcd_myip_iic_cntr_0_0/synth/soc_multiwatch_lcd_myip_iic_cntr_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v:213]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg7_reg was removed.  [/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.gen/sources_1/bd/soc_multiwatch_lcd/ipshared/e6c5/hdl/myip_iic_cntr_slave_lite_v1_0_S00_AXI.v:218]
+WARNING: [Synth 8-7129] Port led[15] in module I2C_master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[14] in module I2C_master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[13] in module I2C_master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[12] in module I2C_master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[11] in module I2C_master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[10] in module I2C_master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[9] in module I2C_master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[8] in module I2C_master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[7] in module I2C_master is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module myip_iic_cntr_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[1] in module myip_iic_cntr_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWPROT[0] in module myip_iic_cntr_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module myip_iic_cntr_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module myip_iic_cntr_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module myip_iic_cntr_slave_lite_v1_0_S00_AXI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1930.551 ; gain = 502.734 ; free physical = 4120 ; free virtual = 35744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1948.363 ; gain = 520.547 ; free physical = 4112 ; free virtual = 35745
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1948.363 ; gain = 520.547 ; free physical = 4112 ; free virtual = 35745
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1948.363 ; gain = 0.000 ; free physical = 4112 ; free virtual = 35745
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2089.113 ; gain = 0.000 ; free physical = 4111 ; free virtual = 35752
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2089.113 ; gain = 0.000 ; free physical = 4107 ; free virtual = 35740
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2089.113 ; gain = 661.297 ; free physical = 4083 ; free virtual = 35716
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2097.117 ; gain = 669.301 ; free physical = 4083 ; free virtual = 35716
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2097.117 ; gain = 669.301 ; free physical = 4083 ; free virtual = 35716
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_write_reg' in module 'myip_iic_cntr_slave_lite_v1_0_S00_AXI'
+INFO: [Synth 8-802] inferred FSM for state register 'state_read_reg' in module 'myip_iic_cntr_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    Idle |                               00 |                               00
+                   Waddr |                               01 |                               10
+                   Wdata |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_write_reg' using encoding 'sequential' in module 'myip_iic_cntr_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    Idle |                               00 |                               00
+                   Raddr |                               01 |                               10
+                   Rdata |                               10 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_read_reg' using encoding 'sequential' in module 'myip_iic_cntr_slave_lite_v1_0_S00_AXI'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2097.117 ; gain = 669.301 ; free physical = 4054 ; free virtual = 35688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 6     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 6     
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 29    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 6     
+	   8 Input   32 Bit        Muxes := 6     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   7 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 4     
+	   7 Input    6 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   3 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 30    
+	   7 Input    1 Bit        Muxes := 3     
+	   4 Input    1 Bit        Muxes := 7     
+	   3 Input    1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s00_axi_awprot[2] in module soc_multiwatch_lcd_myip_iic_cntr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[1] in module soc_multiwatch_lcd_myip_iic_cntr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_awprot[0] in module soc_multiwatch_lcd_myip_iic_cntr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module soc_multiwatch_lcd_myip_iic_cntr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module soc_multiwatch_lcd_myip_iic_cntr_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module soc_multiwatch_lcd_myip_iic_cntr_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2097.117 ; gain = 669.301 ; free physical = 3608 ; free virtual = 35241
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2116.117 ; gain = 688.301 ; free physical = 3137 ; free virtual = 34804
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2116.117 ; gain = 688.301 ; free physical = 3129 ; free virtual = 34796
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2134.141 ; gain = 706.324 ; free physical = 3097 ; free virtual = 34764
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'myip_iic_cntr_slave_lite_v1_0_S00_AXI_insti_0' to logic
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2287.953 ; gain = 860.137 ; free physical = 2857 ; free virtual = 34524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2287.953 ; gain = 860.137 ; free physical = 2857 ; free virtual = 34524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2287.953 ; gain = 860.137 ; free physical = 2861 ; free virtual = 34528
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2287.953 ; gain = 860.137 ; free physical = 2861 ; free virtual = 34528
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2287.953 ; gain = 860.137 ; free physical = 2861 ; free virtual = 34528
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2287.953 ; gain = 860.137 ; free physical = 2861 ; free virtual = 34528
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    18|
+|2     |LUT1   |     4|
+|3     |LUT2   |    92|
+|4     |LUT3   |    17|
+|5     |LUT4   |    45|
+|6     |LUT5   |    97|
+|7     |LUT6   |    69|
+|8     |MUXF7  |    32|
+|9     |FDCE   |   144|
+|10    |FDPE   |    11|
+|11    |FDRE   |   207|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2287.953 ; gain = 860.137 ; free physical = 2861 ; free virtual = 34528
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2287.953 ; gain = 719.387 ; free physical = 2847 ; free virtual = 34514
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2287.961 ; gain = 860.137 ; free physical = 2847 ; free virtual = 34514
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2287.961 ; gain = 0.000 ; free physical = 2846 ; free virtual = 34513
+INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2343.980 ; gain = 0.000 ; free physical = 3001 ; free virtual = 34668
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 79d27316
+INFO: [Common 17-83] Releasing license: Synthesis
+55 Infos, 43 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2343.980 ; gain = 1012.730 ; free physical = 3079 ; free virtual = 34745
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1303.472; main = 1303.472; forked = 192.912
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3017.980; main = 2343.984; forked = 920.859
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2367.992 ; gain = 0.000 ; free physical = 3079 ; free virtual = 34745
+INFO: [Common 17-1381] The checkpoint '/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_iic_cntr_0_0_synth_1/soc_multiwatch_lcd_myip_iic_cntr_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2367.992 ; gain = 0.000 ; free physical = 3052 ; free virtual = 34714
+INFO: [Common 17-1381] The checkpoint '/media/user12/data/work/SOC_exam_2026/SOC_exam_2026.runs/soc_multiwatch_lcd_myip_iic_cntr_0_0_synth_1/soc_multiwatch_lcd_myip_iic_cntr_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file soc_multiwatch_lcd_myip_iic_cntr_0_0_utilization_synth.rpt -pb soc_multiwatch_lcd_myip_iic_cntr_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jan 28 19:22:29 2026...

@@ -1,0 +1,17 @@
+verilog xil_defaultlib --include "/media/user12/data/tools/xilinx/Vivado/2024.2/data/xilinx_vip/include" --include "../../../../SOC_exam_2026.gen/sources_1/bd/soc_can_controller_1/ipshared/3cbc" --include "../../../../SOC_exam_2026.gen/sources_1/bd/soc_can_controller_1/ipshared/ec67/hdl" \
+"../../../bd/soc_can_controller_1/ip/soc_can_controller_1_clk_wiz_0/soc_can_controller_1_clk_wiz_0_clk_wiz.v" \
+"../../../bd/soc_can_controller_1/ip/soc_can_controller_1_clk_wiz_0/soc_can_controller_1_clk_wiz_0.v" \
+"../../../bd/soc_can_controller_1/ip/soc_can_controller_1_lmb_bram_0/sim/soc_can_controller_1_lmb_bram_0.v" \
+"../../../bd/soc_can_controller_1/ip/soc_can_controller_1_microblaze_riscv_0_axi_periph_imp_xbar_0/sim/soc_can_controller_1_microblaze_riscv_0_axi_periph_imp_xbar_0.v" \
+"../../../bd/soc_can_controller_1/ip/soc_can_controller_1_microblaze_riscv_0_xlconcat_0/sim/soc_can_controller_1_microblaze_riscv_0_xlconcat_0.v" \
+"../../../bd/soc_can_controller_1/ipshared/607a/hdl/myip_can_modified_slave_lite_v1_0_S00_AXI.v" \
+"../../../bd/soc_can_controller_1/ipshared/607a/src/CAN_module.v" \
+"../../../bd/soc_can_controller_1/ipshared/607a/hdl/myip_can_modified.v" \
+"../../../bd/soc_can_controller_1/ip/soc_can_controller_1_myip_can_modified_0_0/sim/soc_can_controller_1_myip_can_modified_0_0.v" \
+"../../../bd/soc_can_controller_1/ip/soc_can_controller_1_myip_can_modified_1_0/sim/soc_can_controller_1_myip_can_modified_1_0.v" \
+"../../../bd/soc_can_controller_1/sim/soc_can_controller_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

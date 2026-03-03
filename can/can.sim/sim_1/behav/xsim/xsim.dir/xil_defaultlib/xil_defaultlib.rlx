@@ -1,0 +1,7 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:55
+/media/user12/data/work/can/can.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
+/media/user12/data/work/can/can.srcs/sim_1/new/can_tb.v,1770810136,verilog,,,,tb_can_bit_timing;tb_can_destuffing;tb_can_phase1;tb_can_rx_system;tb_can_stuffing;tb_can_tx_system,,,,,,,,
+/media/user12/data/work/can/can.srcs/sources_1/new/can_master.v,1770810009,verilog,,/media/user12/data/work/can/can.srcs/sim_1/new/can_tb.v,,can_bit_timing_pro;can_bus_monitor;can_destuffing;can_master;can_prescaler;can_rx_shift;can_stuffing;can_tx_shift,,,,,,,,

@@ -1,0 +1,5 @@
+create libxil.a
+addlib /media/user12/data/work/soc_2026_workspace/platform_iic/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartlite/src/libuartlite.a
+addlib /media/user12/data/work/soc_2026_workspace/platform_iic/microblaze_riscv_0/standalone_microblaze_riscv_0/bsp/libsrc/build_configs/gen_bsp/libsrc/iic/src/libiic.a
+save
+end
